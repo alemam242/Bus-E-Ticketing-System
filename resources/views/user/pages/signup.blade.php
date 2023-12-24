@@ -1,4 +1,4 @@
-@extends('admin.layouts.auth')
+@extends('user.layouts.auth')
 
 @section('content')
     <div class="row justify-content-center">
@@ -13,7 +13,7 @@
                         <!-- Success Alert -->
                         <div class="alert alert-success alert-border-left alert-dismissible fade show" role="alert">
                             <i class="ri-check-double-line me-3 align-middle"></i> {{ session('success') }} <a
-                                href="{{ route('admin.login') }}" class="alert-link">Login</a>
+                                href="{{ route('user.login') }}" class="alert-link">Login</a>
                             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
 
                         </div>
@@ -34,7 +34,7 @@
                     <div class="p-2 mt-4">
 
 
-                        <form class="needs-validation" novalidate method="POST" action="{{ route('admin.signup') }}">
+                        <form class="needs-validation" novalidate method="POST" action="{{ route('user.signup') }}">
 
                             @csrf
 
@@ -96,7 +96,7 @@
             <!-- end card -->
 
             <div class="mt-4 text-center">
-                <p class="mb-0">Already have an account ? <a href="{{ route('admin.login') }}"
+                <p class="mb-0">Already have an account ? <a href="{{ route('user.login') }}"
                         class="fw-semibold text-primary text-decoration-underline"> Signin </a> </p>
             </div>
 

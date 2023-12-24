@@ -22,14 +22,14 @@ class UserController extends Controller
         if(Session::has('admin')){
             return redirect()->back();
         }
-        return view('admin.pages.login');
+        return view('user.pages.login');
     }
 
     function showSignupForm(){
         if(Session::has('admin')){
             return redirect()->back();
         }
-        return view('admin.pages.signup');
+        return view('user.pages.signup');
     }
 
     function addUser(Request $request){
@@ -80,7 +80,7 @@ class UserController extends Controller
                 ];
 
                 Session::put('admin', $userInfo);
-                return redirect()->route('admin.dashboard');
+                return redirect()->route('user.dashboard');
             }
         }
 
@@ -95,7 +95,7 @@ class UserController extends Controller
 
                 // return $cities;
 
-        return view('admin.pages.home',compact('cities'));
+        return view('user.pages.home',compact('cities'));
     }
 
     function showTrips(Request $request){
@@ -118,7 +118,7 @@ class UserController extends Controller
 
 
 
-        return view('admin.pages.trips',compact('trips'));
+        return view('user.pages.trips',compact('trips'));
     }
 
     function buyTicket(Request $request){
@@ -147,7 +147,7 @@ class UserController extends Controller
         if(!$ticket){
             return redirect()->back()->with('failed', 'Purchase ticket failed.');
         }
-        return redirect(route('admin.ticket',Session::get('admin')['id']))->with('success', 'Purchase ticket successfully.');
+        return redirect(route('user.ticket',Session::get('admin')['id']))->with('success', 'Purchase ticket successfully.');
     }
 
 
@@ -156,6 +156,6 @@ class UserController extends Controller
         if($user){
             Session::forget('admin');
         }
-        return redirect()->route('admin.login');
+        return redirect()->route('user.login');
     }
 }

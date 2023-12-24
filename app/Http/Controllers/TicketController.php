@@ -19,6 +19,6 @@ class TicketController extends Controller
 
     // return $tickets;
 
-        return view('admin.pages.tickets',compact('tickets'));
+        return view('user.pages.tickets',compact('tickets'));
     }
 }

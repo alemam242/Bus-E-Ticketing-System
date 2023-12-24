@@ -1,4 +1,4 @@
-@extends('admin.layouts.app')
+@extends('user.layouts.app')
 
 @section('content')
     <!-- ============================================================== -->
@@ -31,7 +31,7 @@
                                     <!-- card -->
                                     <div class="card">
                                         <div class="card-body">
-                                            <form id="my-form" method="POST" action="{{ route('admin.trip') }}"
+                                            <form id="my-form" method="POST" action="{{ route('user.trip') }}"
                                                 onsubmit="return validateAndSubmit()">
                                                 @csrf
 
@@ -94,7 +94,7 @@
             </div>
             <!-- End Page-content -->
 
-            @include('admin.components.footer')
+            @include('user.components.footer')
         </div>
         <!-- end main content-->
 

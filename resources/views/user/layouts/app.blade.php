@@ -34,11 +34,11 @@
     <div id="layout-wrapper">
 
         {{-- Header Attached Here --}}
-        @include('admin.components.header')
+        @include('user.components.header')
 
 
         {{-- Navbar Attached Here --}}
-        @include('admin.components.navbar')
+        @include('user.components.navbar')
 
 
         <!-- Vertical Overlay-->

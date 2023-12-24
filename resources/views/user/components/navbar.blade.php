@@ -32,7 +32,7 @@
             <ul class="navbar-nav" id="navbar-nav">
                 <li class="menu-title"><span data-key="t-menu">Menu</span></li>
                 <li class="nav-item">
-                    <a class="nav-link menu-link" href="{{ route('admin.dashboard') }}" data-bs-toggle="" role="button"
+                    <a class="nav-link menu-link" href="{{ route('user.dashboard') }}" data-bs-toggle="" role="button"
                         aria-expanded="false" aria-controls="sidebarDashboards">
                         <i data-feather="home" class="icon-dual"></i>
                         <span data-key="t-dashboards">Home</span>
@@ -42,7 +42,7 @@
 
                 <li class="nav-item">
                     <a class="nav-link menu-link collapsed"
-                        href="{{ route('admin.ticket', Session::get('admin')['id']) }}" data-bs-toggle="" role="button"
+                        href="{{ route('user.ticket', Session::get('admin')['id']) }}" data-bs-toggle="" role="button"
                         aria-expanded="false" aria-controls="sidebarTables">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                             fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
